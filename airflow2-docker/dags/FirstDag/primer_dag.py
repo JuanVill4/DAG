@@ -8,7 +8,7 @@ from datetime import datetime
 def choose_best_model(ti):
     accuracies = ti.xcom_pull(task_ids=["training_modelA", "training_modelB", "training_modelC"])
     best_accuracy = max(accuracies)
-    if (best_accuracy > 8 ):
+    if (best_accuracy > 7 ):
         return 'accurate'
     elif (best_accuracy > 5):
         return 'midly_accurate'
